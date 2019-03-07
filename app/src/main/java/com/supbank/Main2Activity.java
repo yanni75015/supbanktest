@@ -7,24 +7,25 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity {
 
-    private Button btnRegister;
+    private Button btnReturnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
+
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        this.setContentView(R.layout.activity_main);
+        this.setContentView(R.layout.activity_main2);
 
-        btnRegister = findViewById(R.id.button);
+        btnReturnLogin = findViewById(R.id.button_return_login);
 
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        btnReturnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homepageActivity = new Intent(MainActivity.this, Main2Activity.class);
+                Intent homepageActivity = new Intent(Main2Activity.this, MainActivity.class);
                 startActivity(homepageActivity);
             }
         });
